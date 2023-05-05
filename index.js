@@ -7,7 +7,7 @@ const UserRoute = require('./routes/product')
 
 
 
-//creating server on prt 8000
+//creating server on port 8000
 const port = 8000
 app.listen(port,function(err){
     if(err){
