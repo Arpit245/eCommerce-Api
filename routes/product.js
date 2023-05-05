@@ -1,22 +1,8 @@
 const router = require('express').Router()
 const Product = require('../models/Product')
+const createProduct = require('../controllers/product_controller')
 
-router.post('/create',async (req,res) =>{
-    const newProduct = new Product({
-        name:req.body.name,
-        quantity:req.body.quantity
-    });
-    try{
-    const savedProduct = await newProduct.save();
-    res.status(201).json(savedProduct)
-    }
-    catch(err){
-        res.status(500).json(err)
-    }
-
-
-
-})
+router.post('/create',createProduct.create)
 
 // router.get('/usertest',(req,res)=>{
 //     res.send("user test successfull")
