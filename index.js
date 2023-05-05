@@ -7,7 +7,7 @@ const UserRoute = require('./routes/product')
 
 
 
-//creating server
+//creating server on prt 8000
 const port = 8000
 app.listen(port,function(err){
     if(err){
@@ -17,7 +17,7 @@ app.listen(port,function(err){
     console.log(`Server running on ${port}`)
 })
 
-app.use(express.json()) // to pass json file
+
 
 // using body parser to parse over the request body
 app.use(bodyParser.json());
