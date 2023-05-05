@@ -8,7 +8,7 @@ const UserRoute = require('./routes/product')
 app.use(express.json()) // to pass json file
 
 // using body parser to parse over the request body
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use('/products',UserRoute)
 
 

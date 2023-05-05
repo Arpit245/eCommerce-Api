@@ -8,5 +8,5 @@ const productSchema = new mongoose.Schema({
 })
 
 
-const Product = moongose.model("Product",productSchema)
+const Product = mongoose.model("Product",productSchema)
 module.exports = Product
